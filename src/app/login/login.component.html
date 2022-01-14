@@ -4,46 +4,7 @@
             <h3><span class="glyphicon glyphicon-lock"></span> Login</h3>
         </header>
         <br />
-        <form [formGroup]="loginForm" (ngSubmit)="submit(loginForm)" class="login-form" novalidate>
-            <div class="login">
-                <div class="row">
-                    <div class="col-md-2">
-                        Email:
-                    </div>
-                    <div class="col-md-10">
-                        <input title="email" type="email" name="email" class="form-control" formControlName="email" />
-                        <div class="alert alert-danger" data-cy="email-error" [hidden]="f['email'].untouched || f['email'].valid">
-                            A valid email address is required
-                        </div>
-                    </div>
-                </div>
-                <br />
-                <div class="row">
-                    <div class="col-md-2">
-                        Password:
-                    </div>
-                    <div class="col-md-10">
-                        <input title="password" type="password" name="password" class="form-control" formControlName="password" />
-                        <div class="alert alert-danger" data-cy="password-error" [hidden]="f['password'].untouched || f['password'].valid">
-                            Password is required (6 or more characters with at least one number)
-                        </div>
-                    </div>
-                </div>
-                <br />
-                <div class="row">
-                    <div class="col-md-12">
-                        <button type="submit" class="btn btn-success" [disabled]="!loginForm.valid">Login</button>
-                    </div>
-                </div>
-                <br />
-                <div class="statusRow">
-                    <br />
-                    <div class="label label-important" *ngIf="errorMessage">
-                        <span class="glyphicon glyphicon-thumbs-down icon-white"></span>&nbsp;&nbsp;Error: {{ errorMessage }}
-                    </div>
-                </div>
-            </div>
-        </form>
-        
+
+        <img src="assets/images/signin_light.svg" alt="Sign in with Microsoft" data-linktype="relative-path" (click)="login()" style="cursor: pointer;">
     </div>
 </div>
